@@ -24,7 +24,7 @@ case class Instr[I[+_], +A](instr: I[A]) extends Program[I, A] {
   def view[T >: A]: ProgramView[I, T] = Bnd[I, A, A](instr, (x: A) => Lift[I, A](x))
 }
 
-case class Bind[I[+_], -X, +A](prog: Program[I, X], f: X => Program[I, A]) extends Program[I, A] {
+case class Bind[I[+_], X, +A](prog: Program[I, X], f: X => Program[I, A]) extends Program[I, A] {
   import Program._
 
   def view[T >: A]: ProgramView[I, T] = prog match {
