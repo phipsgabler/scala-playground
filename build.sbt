@@ -9,4 +9,6 @@ scalacOptions ++= Seq("-feature", "-language:implicitConversions", "-deprecation
 libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.1.1"
 
 mainClass in (Compile,run) := Some("Main")
+
+initialCommands in console := "import playground.mixin._"
     
