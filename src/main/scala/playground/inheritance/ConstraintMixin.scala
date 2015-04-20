@@ -2,7 +2,7 @@ package playground
 
 import scala.language.higherKinds
 
-package object mixin {
+object ConstraintMixin {
   trait Class1[T] {
     val default1: T
   }
@@ -14,6 +14,7 @@ package object mixin {
   trait Base {
     type S
     type S_Constraint[A]
+
 
     def generate(implicit witness: S_Constraint[S]): S
   }
