@@ -1,4 +1,4 @@
-name := "Playground"
+name := "playground"
 
 version := "1.0"
 

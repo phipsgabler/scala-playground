@@ -1,5 +1,10 @@
 package playground.inheritance
 
+
+/**
+ * How well does inheritance of implicit wrappers work?
+ * well enough, it seems.
+ */
 object ImplicitInheritance {
   trait Basic {
     type T
